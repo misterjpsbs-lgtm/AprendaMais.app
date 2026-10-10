@@ -40,7 +40,6 @@ function CourseDetail() {
   return (
     <PageShell>
       <article className="mx-auto grid max-w-6xl gap-10 px-4 py-10 md:grid-cols-2">
-        <title>{`${course.title} — AprendaMais`}</title>
         <div className="aspect-video overflow-hidden rounded-2xl bg-secondary">
           {course.image_url ? (
             <img src={course.image_url} alt={course.title} className="h-full w-full object-cover" />

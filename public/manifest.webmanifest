@@ -1,0 +1,13 @@
+{
+  "name": "AprendaMais — Conhecimento que abre caminhos",
+  "short_name": "AprendaMais",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfdfb",
+  "theme_color": "#1f4636",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

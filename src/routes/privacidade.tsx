@@ -22,7 +22,7 @@ export const Route = createFileRoute("/privacidade")({
       </p>
       <h2>Links para terceiros</h2>
       <p>
-        Ao clicar em “Comprar na Hotmart”, você é direcionado à Hotmart ou à plataforma do produtor, que possuem
+        Ao clicar em “Conhecer curso” na página de um curso, você é direcionado à Hotmart ou à plataforma do produtor, que possuem
         suas próprias políticas de privacidade. A compra e os dados de pagamento são tratados exclusivamente por elas.
       </p>
       <h2>Programa de afiliados</h2>

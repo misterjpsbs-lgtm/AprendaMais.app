@@ -65,7 +65,7 @@ function CourseDetail() {
               onClick={() => trackEvent("click", { courseId: course.id, path: `/cursos/${course.slug}` })}
               className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-semibold text-primary-foreground transition hover:bg-brand sm:w-auto"
             >
-              Comprar na Hotmart <ExternalLink className="h-4 w-4" aria-hidden />
+               Conhecer curso <ExternalLink className="h-4 w-4" aria-hidden />
             </a>
           ) : (
             <button disabled className="mt-6 w-full cursor-not-allowed rounded-full bg-muted px-6 py-4 font-semibold text-muted-foreground sm:w-auto">

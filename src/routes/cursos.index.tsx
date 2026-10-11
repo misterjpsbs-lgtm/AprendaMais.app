@@ -17,6 +17,8 @@ export const Route = createFileRoute("/cursos/")({
       { name: "description", content: "Pesquise e filtre cursos digitais por categoria." },
       { property: "og:title", content: "Catálogo de cursos — AprendaMais" },
       { property: "og:description", content: "Pesquise e filtre cursos digitais por categoria." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Catalog,
@@ -53,7 +55,7 @@ function Catalog() {
           <Link search={(p: Search) => ({ ...p, categoria: undefined })} to="/cursos" className={`rounded-full border px-4 py-1.5 text-sm ${!cat ? "border-primary bg-primary text-primary-foreground" : "bg-card"}`}>Todas</Link>
           {cats.map((c) => (
             <Link key={c.id} to="/cursos" search={(p: Search) => ({ ...p, categoria: c.slug })} className={`rounded-full border px-4 py-1.5 text-sm ${cat?.id === c.id ? "border-primary bg-primary text-primary-foreground" : "bg-card"}`}>
-              {c.name}
+               {c.slug === "profissoes" ? "Profissões e Qualificação" : c.name}
             </Link>
           ))}
         </div>

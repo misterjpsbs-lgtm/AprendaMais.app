@@ -12,6 +12,8 @@ export const Route = createFileRoute("/_authenticated/admin")({
       { name: "description", content: "Gerencie cursos e categorias." },
       { property: "og:title", content: "Painel administrativo — AprendaMais" },
       { property: "og:description", content: "Gerencie cursos e categorias." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex" },
     ],
   }),

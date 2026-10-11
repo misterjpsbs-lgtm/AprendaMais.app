@@ -8,6 +8,8 @@ export const Route = createFileRoute("/privacidade")({
       { name: "description", content: "Como a AprendaMais trata seus dados, em conformidade com a LGPD." },
       { property: "og:title", content: "Política de privacidade — AprendaMais" },
       { property: "og:description", content: "Como a AprendaMais trata seus dados." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: () => (

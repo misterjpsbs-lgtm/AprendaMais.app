@@ -10,9 +10,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "AprendaMais — Conhecimento que abre caminhos" },
-      { name: "description", content: "Encontre cursos digitais de Marketing, Inteligência Artificial, Empreendedorismo, Finanças e mais." },
+      { name: "description", content: "Cursos online para aprender, crescer e conquistar novas oportunidades." },
       { property: "og:title", content: "AprendaMais — Conhecimento que abre caminhos" },
-      { property: "og:description", content: "Cursos digitais selecionados para você crescer pessoal e profissionalmente." },
+      { property: "og:description", content: "Cursos online para aprender, crescer e conquistar novas oportunidades." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -40,10 +42,10 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand via-brand/90 to-brand/30" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
           <p className="text-sm font-semibold uppercase tracking-widest text-leaf">AprendaMais</p>
-          <h1 className="mt-3 max-w-xl text-4xl font-semibold leading-tight md:text-6xl">Conhecimento que abre caminhos</h1>
-          <p className="mt-5 max-w-lg text-lg opacity-85">Cursos digitais selecionados para você aprender novas habilidades e crescer no seu ritmo.</p>
+           <h1 className="mt-3 max-w-xl text-4xl font-semibold leading-tight md:text-6xl">Aprenda algo novo. Transforme seu futuro!</h1>
+           <p className="mt-5 max-w-lg text-lg opacity-85">Cursos online para aprender, crescer e conquistar novas oportunidades.</p>
           <Link to="/cursos" search={{ q: undefined, categoria: undefined }} className="mt-8 inline-flex items-center gap-2 rounded-full bg-leaf px-6 py-3 font-semibold text-brand transition hover:brightness-105">
-            Explorar cursos <ArrowRight className="h-4 w-4" aria-hidden />
+             Encontrar meu curso <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
       </section>
@@ -56,7 +58,7 @@ function Index() {
             return (
               <Link key={c.id} to="/cursos" search={{ categoria: c.slug, q: undefined }} className="flex flex-col items-start gap-3 rounded-xl border bg-card p-4 transition hover:border-primary hover:bg-secondary">
                 <span className="grid h-10 w-10 place-items-center rounded-lg bg-secondary text-primary"><Icon className="h-5 w-5" aria-hidden /></span>
-                <span className="text-sm font-semibold">{c.name}</span>
+                 <span className="text-sm font-semibold">{c.slug === "profissoes" ? "Profissões e Qualificação" : c.name}</span>
               </Link>
             );
           })}

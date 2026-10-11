@@ -30,7 +30,10 @@ export function CourseCard({ course, categoryName }: { course: Course; categoryN
         {course.short_description && (
           <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{course.short_description}</p>
         )}
-        <div className="mt-auto pt-4 text-sm font-semibold">{price ?? <span className="text-muted-foreground">Ver detalhes →</span>}</div>
+        <div className="mt-auto pt-4 text-sm font-semibold">
+          {price && <p>{price}</p>}
+          <span className="mt-2 inline-block text-primary">Conhecer curso →</span>
+        </div>
       </div>
     </Link>
   );

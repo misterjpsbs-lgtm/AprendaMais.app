@@ -4,7 +4,7 @@ import { PageShell } from "@/components/SiteLayout";
 import { CourseCard } from "@/components/CourseCard";
 import { categoriesQuery, coursesQuery } from "@/lib/store";
 
-type Search = { q?: string; categoria?: string };
+type Search = { q?: string | undefined; categoria?: string | undefined };
 
 export const Route = createFileRoute("/cursos/")({
   validateSearch: (s: Record<string, unknown>): Search => ({

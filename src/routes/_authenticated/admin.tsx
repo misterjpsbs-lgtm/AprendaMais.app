@@ -72,8 +72,8 @@ function Admin() {
   const saveCourse = async (e: FormEvent) => {
     e.preventDefault();
     if (!editing?.title) return;
-    if (editing.affiliate_url && !isSafeUrl(editing.affiliate_url)) return toast.error("O link de afiliado deve começar com https://");
-    if (editing.image_url && !isSafeUrl(editing.image_url)) return toast.error("A URL da imagem deve começar com https://");
+    if (editing.affiliate_url && !isSafeUrl(editing.affiliate_url)) return void toast.error("O link de afiliado deve começar com https://");
+    if (editing.image_url && !isSafeUrl(editing.image_url)) return void toast.error("A URL da imagem deve começar com https://");
     const row = {
       title: editing.title,
       slug: editing.slug || slugify(editing.title),
@@ -90,7 +90,7 @@ function Admin() {
     const { error } = editing.id
       ? await supabase.from("courses").update(row).eq("id", editing.id)
       : await supabase.from("courses").insert(row);
-    if (error) return toast.error(error.message);
+    if (error) return void toast.error(error.message);
     toast.success("Curso salvo");
     setEditing(null);
     refresh();
@@ -99,7 +99,7 @@ function Admin() {
   const del = async (id: string) => {
     if (!confirm("Remover este curso?")) return;
     const { error } = await supabase.from("courses").delete().eq("id", id);
-    if (error) return toast.error(error.message);
+    if (error) return void toast.error(error.message);
     refresh();
   };
 
@@ -107,7 +107,7 @@ function Admin() {
     e.preventDefault();
     if (!newCat.trim()) return;
     const { error } = await supabase.from("categories").insert({ name: newCat.trim(), slug: slugify(newCat), sort_order: cats.length + 1 });
-    if (error) return toast.error(error.message);
+    if (error) return void toast.error(error.message);
     setNewCat("");
     refresh();
   };
@@ -115,7 +115,7 @@ function Admin() {
     const n = prompt("Novo nome da categoria", name);
     if (!n) return;
     const { error } = await supabase.from("categories").update({ name: n }).eq("id", id);
-    if (error) return toast.error(error.message);
+    if (error) return void toast.error(error.message);
     refresh();
   };
   const delCat = async (id: string) => {

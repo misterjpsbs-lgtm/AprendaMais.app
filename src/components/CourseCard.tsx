@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { BookOpen } from "lucide-react";
 import { formatPrice, type Course } from "@/lib/store";
 
-export function CourseCard({ course, categoryName }: { course: Course; categoryName?: string }) {
+export function CourseCard({ course, categoryName }: { course: Course; categoryName?: string | undefined }) {
   const price = formatPrice(course.price);
   return (
     <Link

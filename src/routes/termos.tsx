@@ -8,6 +8,8 @@ export const Route = createFileRoute("/termos")({
       { name: "description", content: "Condições de uso da loja AprendaMais." },
       { property: "og:title", content: "Termos de uso — AprendaMais" },
       { property: "og:description", content: "Condições de uso da loja AprendaMais." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: () => (

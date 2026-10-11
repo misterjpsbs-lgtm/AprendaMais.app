@@ -10,6 +10,8 @@ export const Route = createFileRoute("/auth")({
       { name: "description", content: "Entrada do painel administrativo." },
       { property: "og:title", content: "Acesso administrativo — AprendaMais" },
       { property: "og:description", content: "Entrada do painel administrativo." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex" },
     ],
   }),

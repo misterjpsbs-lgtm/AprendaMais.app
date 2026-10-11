@@ -8,6 +8,8 @@ export const Route = createFileRoute("/contato")({
       { name: "description", content: "Fale com a equipe AprendaMais." },
       { property: "og:title", content: "Contato — AprendaMais" },
       { property: "og:description", content: "Fale com a equipe AprendaMais." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: () => (

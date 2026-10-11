@@ -11,6 +11,8 @@ export const Route = createFileRoute("/cursos/$slug")({
       { name: "description", content: "Veja os detalhes do curso e compre com segurança na Hotmart." },
       { property: "og:title", content: "Detalhes do curso — AprendaMais" },
       { property: "og:description", content: "Veja os detalhes do curso e compre com segurança na Hotmart." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: CourseDetail,
@@ -49,7 +51,7 @@ function CourseDetail() {
         </div>
         <div>
           <Link to="/cursos" search={{ q: undefined, categoria: undefined }} className="text-sm text-muted-foreground">← Catálogo</Link>
-          {cat && <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-primary">{cat.name}</p>}
+           {cat && <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-primary">{cat.slug === "profissoes" ? "Profissões e Qualificação" : cat.name}</p>}
           <h1 className="mt-1 text-3xl font-semibold md:text-4xl">{course.title}</h1>
           {course.is_demo && (
             <p className="mt-3 rounded-lg bg-accent/40 px-3 py-2 text-sm">Este é um curso de demonstração, sem link de compra.</p>
@@ -63,7 +65,7 @@ function CourseDetail() {
               onClick={() => trackEvent("click", { courseId: course.id, path: `/cursos/${course.slug}` })}
               className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 font-semibold text-primary-foreground transition hover:bg-brand sm:w-auto"
             >
-              Comprar na Hotmart <ExternalLink className="h-4 w-4" aria-hidden />
+               Conhecer curso <ExternalLink className="h-4 w-4" aria-hidden />
             </a>
           ) : (
             <button disabled className="mt-6 w-full cursor-not-allowed rounded-full bg-muted px-6 py-4 font-semibold text-muted-foreground sm:w-auto">

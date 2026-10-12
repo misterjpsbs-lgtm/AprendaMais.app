@@ -55,10 +55,7 @@ function AuthPage() {
         <button disabled={busy} className="mt-6 h-11 w-full rounded-full bg-primary font-semibold text-primary-foreground disabled:opacity-60">
           {busy ? "Aguarde…" : mode === "in" ? "Entrar" : "Criar conta"}
         </button>
-        <button type="button" onClick={() => setMode(mode === "in" ? "up" : "in")} className="mt-4 w-full text-sm text-muted-foreground">
-          {mode === "in" ? "Primeiro acesso? Criar conta" : "Já tenho conta"}
-        </button>
-        <p className="mt-4 text-xs text-muted-foreground">Somente a primeira conta criada recebe acesso de administrador.</p>
+        <p className="mt-4 text-xs text-muted-foreground">Acesso restrito à administração da loja.</p>
       </form>
     </div>
   );

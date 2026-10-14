@@ -2,13 +2,13 @@
 
 Implement exactly the screenshot and nothing else
 
-This project was built with [Lovable](https://aprendeo.lovable.app)
+This project was built with [Lovable]()
 
 **Live app**: https://learnify-hub-29.lovable.app
 
 ## Build with Lovable
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/a1fcfd3a-c56e-4bbf-bcbc-6dde6fd41182).
+Continue developing this project in the [Lovable editor](https://aprendeo.lovable.app).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.

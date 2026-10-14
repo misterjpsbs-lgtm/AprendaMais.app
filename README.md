@@ -2,7 +2,7 @@
 
 Implement exactly the screenshot and nothing else
 
-This project was built with [Lovable](https://lovable.dev).
+This project was built with [Lovable](https://aprendeo.lovable.app)
 
 **Live app**: https://learnify-hub-29.lovable.app
 
